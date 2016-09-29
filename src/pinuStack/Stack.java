@@ -39,7 +39,13 @@ public class Stack {
 		Stacksize++;
 	}
 	
-	
+	public Integer pop() {
+		if (Stacksize<1) {
+			throw new IllegalStateException();
+		}
+		Stacksize--;
+		return elements[Stacksize];
+	}
 	
 	
 	
