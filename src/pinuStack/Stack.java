@@ -47,7 +47,12 @@ public class Stack {
 		return elements[Stacksize];
 	}
 	
-	
+	public Integer peek() {
+		if (Stacksize<1) {
+			throw new IllegalStateException();
+		}
+		return elements[Stacksize-1];
+	}
 	
 	
 	

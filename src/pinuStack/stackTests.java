@@ -32,4 +32,14 @@ public class stackTests {
         stack.pop();
         assertThat(stack.getSize(),is(0));
     }
+	
+    @Test
+    public void pushedelementsRet() throws Exception {
+        Stack stack = new Stack();
+        stack.push(5);
+        stack.push(2);
+        
+        assertThat(stack.pop(), is(2));
+        assertThat(stack.pop(), is(5));
+    }
 }
