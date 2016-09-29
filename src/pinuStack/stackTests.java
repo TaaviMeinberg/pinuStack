@@ -23,4 +23,13 @@ public class stackTests {
 	    assertThat(stack.getSize(),is(2));
 	}
 
+    @Test
+    public void eachPopDecreaseStackSize()  {
+        Stack stack = new Stack();
+        stack.push(1);
+        stack.push(41);
+        stack.pop();
+        stack.pop();
+        assertThat(stack.getSize(),is(0));
+    }
 }
