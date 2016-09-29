@@ -2,10 +2,22 @@ package pinuStack;
 
 public class Stack {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		// adding just test text to see if it can be pulled
-System.out.println("zup?");
+
+	int size = 0;
+
+	/**
+	 * 
+	 */
+	public Stack() {
+
 	}
 
+	public int getSize() {
+		return size;
+	}
+
+	public void setSize(int size) {
+		this.size = size;
+	}
+	
 }
