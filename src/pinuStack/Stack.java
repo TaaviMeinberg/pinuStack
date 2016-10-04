@@ -11,12 +11,14 @@ public class Stack {
 
 		Stack sk = new Stack();
 		System.out.println(sk);
+		sk.push(5);
 		sk.push(2);
-		sk.push(4);
-		sk.push(8);
 		System.out.println(sk);
-		System.out.println(sk.pop());
-		System.out.println(sk);
+		sk.pop();
+		
+		
+		System.out.println(sk.getLastElement());
+		
 //		System.out.println(sk.peek());
 
 	}
@@ -38,8 +40,9 @@ public class Stack {
 		if (stacksize < 1) {
 			throw new IllegalStateException();
 		}
+		elements.remove(elements.size()-1);
 		stacksize--;
-		return elements.get(stacksize);
+		return elements.size();
 	}
 
 	public Integer peek() {
@@ -47,6 +50,10 @@ public class Stack {
 			throw new IllegalStateException();
 		}
 		return elements.get(stacksize);
+	}
+	
+	public Integer getLastElement(){
+		return  elements.get(elements.size()-1);
 	}
 
 	@Override

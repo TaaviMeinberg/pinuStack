@@ -38,9 +38,8 @@ public class StackTests {
         Stack stack = new Stack();
         stack.push(5);
         stack.push(2);
-        
-        assertThat(stack.pop(), is(2));
-        assertThat(stack.pop(), is(5));
+        stack.pop();
+        assertThat(stack.getLastElement(), is(5));
     }
 	@Test
     public void pushedelementsPeek() throws Exception {
