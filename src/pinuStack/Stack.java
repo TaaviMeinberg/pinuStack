@@ -6,7 +6,8 @@ public class Stack {
 	// private Integer[] elements = new Integer[100];
 	private ArrayList<Integer> elements = new ArrayList<Integer>();
 	private int stacksize = 0;
-
+	//TESTING PUSH
+	
 	public static void main(String[] args) {
 
 		Stack sk = new Stack();
