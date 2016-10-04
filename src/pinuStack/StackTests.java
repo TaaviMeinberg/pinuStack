@@ -37,9 +37,8 @@ public class StackTests {
     public void pushedelementsRet() throws Exception {
         Stack stack = new Stack();
         stack.push(5);
-        stack.push(2);
-        stack.pop();
-        assertThat(stack.getLastElement(), is(5));
+        stack.push(7);
+        assertThat(stack.pop(), is(7));
     }
 	@Test
     public void pushedelementsPeek() throws Exception {
@@ -52,8 +51,8 @@ public class StackTests {
     public void pushedelementsSizeTwo() throws Exception {
         Stack stack = new Stack();
         stack.push(5);
-        stack.push(2);
-        assertThat(stack.peek(), is(2));
+        stack.push(7);
+        assertThat(stack.peek(), is(7));
         assertThat(stack.getSize(), is(2));
     }
 	@Test
