@@ -19,6 +19,7 @@ public class Stack {
 		
 //		System.out.println(sk.peek());
 
+	System.out.println("try pull");
 	}
 
 	public Stack() {
