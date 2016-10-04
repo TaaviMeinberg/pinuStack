@@ -46,8 +46,8 @@ public class StackTests {
     public void pushedelementsPeek() throws Exception {
         Stack stack = new Stack();
         stack.push(5);
-        stack.push(2);
-        assertThat(stack.peek(), is(2));
+        stack.push(8);
+        assertThat(stack.peek(), is(8));
     }
 	@Test
     public void pushedelementsSizeTwo() throws Exception {
@@ -61,10 +61,10 @@ public class StackTests {
     public void pushedelementsPeekTwice() throws Exception {
         Stack stack = new Stack();
         stack.push(5);
-        stack.push(2);
-        assertThat(stack.peek(), is(2));
+        stack.push(6);
+        assertThat(stack.peek(), is(6));
         int peeked = stack.peek();
-        assertThat(peeked, is(2));
+        assertThat(peeked, is(6));
     }
 	@Test(expected= IllegalStateException.class)
 		public void popEmptyStackThows() throws Exception {
