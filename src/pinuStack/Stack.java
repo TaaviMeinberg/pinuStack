@@ -1,41 +1,8 @@
 package pinuStack;
 
-import java.util.ArrayList;
-
-public class Stack {
-	// private Integer[] elements = new Integer[100];
-	private ArrayList<Integer> elements = new ArrayList<Integer>();
-	private int stacksize = 0;
-	//TESTING PUSH
+public class Stack extends AbstractStack{
 	
-	public static void main(String[] args) {
-
-		Stack sk = new Stack();
-		System.out.println(sk);
-		sk.push(5);
-		sk.push(8);
-		System.out.println(sk);
-		sk.peek();
-		System.out.println(sk.getLastElement());
-		
-//		System.out.println(sk.peek());
-
-	System.out.println("try pull");
-	}
-
-	public Stack() {
-
-	}
-
-	public int getSize() {
-		return stacksize;
-	}
-
-	public void push(Integer i) {
-		elements.add(i);
-		stacksize++;
-	}
-
+	@Override
 	public Integer pop() {
 		if (stacksize < 1) {
 			throw new IllegalStateException();
@@ -46,20 +13,18 @@ public class Stack {
 		return lastElemente;
 	}
 
+	@Override
 	public Integer peek() {
 		if (stacksize < 1) {
 			throw new IllegalStateException();
 		}
-		return elements.get(elements.size()-1);
+		return getLastElement();
 	}
 	
-	public Integer getLastElement(){
+	private Integer getLastElement(){
 		return  elements.get(elements.size()-1);
 	}
 
-	@Override
-	public String toString() {
-		return "Stack [" + (elements != null ? "elements=" + elements + ", " : "") + "stacksize=" + stacksize + "]";
-	}
+	
 
 }
