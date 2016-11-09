@@ -42,4 +42,11 @@ public class QueueTests {
         assertThat(queue.getSize(),is(2));
         
     }
+	
+	public void callAllQueueTests() throws Exception{
+		eachPushIncreaseStackSize();
+		eachPopDecreaseStackSize();
+		pushedelementsRet();
+		pushedelementsPeek();
+	}
 }
